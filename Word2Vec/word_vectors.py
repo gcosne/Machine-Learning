@@ -213,6 +213,9 @@ def kmeans():
     transformed = pca.fit_transform(vect_2d)
 
     clusters = KMeans(n_clusters=5).fit(transformed)
+    predicted = np.matrix(clusters.predict(transformed))
+    print("Cluster centers:\n", clusters.cluster_centers_)
+    print("Data point predictions:\n", np.append(transformed, predicted.T, axis=1))
 
     plt.figure(2)
     plt.plot(transformed[0:len(fruits), 0], transformed[0:len(fruits), 1], 'o', markersize=7, color='blue',
