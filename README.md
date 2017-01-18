@@ -1,2 +1,2 @@
 # Machine-Learning
-School projects
+School projects : Develop Your First Neural Network in Python With Keras Step-By-Step
